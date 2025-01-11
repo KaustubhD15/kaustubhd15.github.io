@@ -1,1 +1,1 @@
-Visit my portfolio @ https://kaustubhd15.github.io/portfolio-temp/
+Visit my portfolio @ https://kaustubhd15.github.io/
