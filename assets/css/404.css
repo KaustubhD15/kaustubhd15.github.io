@@ -1,35 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
 
-
-/* Style for larger screens (monitors) */
-
-@media (min-width: 1024px) {
-
-  .monitor-specific-style {
-
-    /* Styles that should only appear on monitors, like larger font sizes, wider layouts, etc. */
-
-    font-size: 20px;
-
-    width: 800px;
-
-  }
-
-}
-
-
-
-/* General styles for all devices */
-
-.normal-style {
-
-  /* Styles that should apply to both phones and monitors */
-
-  font-size: 16px;
-
-}
-
 *{
   margin: 0;
   padding: 0;
