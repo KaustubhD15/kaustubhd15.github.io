@@ -837,3 +837,124 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experience Timeline</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="work-experience-container">
+        <h2>Work Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Software Engineer</h3>
+                    <p>Company: XYZ Ltd.</p>
+                    <p>Duration: 2020 - Present</p>
+                    <p>Worked on developing web applications using React and Node.js.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Frontend Developer</h3>
+                    <p>Company: ABC Corp.</p>
+                    <p>Duration: 2018 - 2020</p>
+                    <p>Contributed to UI design and development with a focus on user experience.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Junior Developer</h3>
+                    <p>Company: Tech Solutions</p>
+                    <p>Duration: 2016 - 2018</p>
+                    <p>Assisted in building and maintaining websites for clients.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.work-experience-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+  margin-left: 40px;
+  border-left: 2px solid #333;
+}
+
+.timeline-item {
+  margin: 20px 0;
+  position: relative;
+}
+
+.timeline-item .timeline-content {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 0;
+  height: 100%;
+  width: 14px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+}
+
+.timeline-item h3 {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.timeline-item p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.timeline-item p:first-of-type {
+  font-weight: bold;
+}
+
+.timeline-item p:last-of-type {
+  color: #888;
+}
