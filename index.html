@@ -602,17 +602,11 @@
           <h3 class="project-title">Data Science Salaries</h3>
       </a>
   </div>
-  
-  <h3 class="sub-heading">SQL</h3>
-  <div class="box-container">
 
-    <!-- Project Tile 1 -->
-    <div class="project-tile">
-      <a href="https://github.com/najirh/netflix_sql_project" target="_blank">
-          <img src="assets/images/projects/logo.png" alt="Project Image" class="project-image">
-          <h3 class="project-title">Netflix</h3>
-      </a>
-  </div>
+</br>
+
+
+  <!-- View All Projects Button -->
   <div class="viewall">
     <a href="https://github.com/KaustubhD15?tab=repositories" class="btn" target="_blank">
       <span>View All Projects</span>
@@ -643,6 +637,7 @@
     flex-wrap: wrap; /* Allow wrapping to the next line if necessary */
     gap: 20px; /* Space between tiles */
     justify-content: center; /* Center tiles within the container */
+    margin-bottom: 30px; /* Space below tiles */
   }
 
   #projects .project-tile {
@@ -675,23 +670,24 @@
   }
 
   #projects .viewall {
-    margin-top: 30px;
-  }
+  margin-top: 30px; /* Add spacing above the button */
+  text-align: center; /* Center the button */
+}
 
   #projects .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f7f7f7;
-    color: #000;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
 
     /* Styling for the Visualization sub-heading */
     #projects .sub-heading {
@@ -702,6 +698,12 @@
     margin-left: 10px;
     margin-top: 20px; /* Added spacing from the previous heading */
   }
+
+/* Override text alignment for parent containers */
+#projects {
+  text-align: left; /* Ensure the entire #projects section aligns left */
+}
+
 
   #projects .btn:hover {
     background-color: #ffc107;
