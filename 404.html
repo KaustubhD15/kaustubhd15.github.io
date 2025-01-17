@@ -14,7 +14,7 @@
 <body oncontextmenu="return false">
 
 <!-- navbar starts -->
-<header>
+<!-- <header>
         <a href="/" class="logo"><i class="fab fa-node-js"></i> Kaustubh Manoj Darange</a>
 
         <div id="menu" class="fas fa-bars"></div>
@@ -29,7 +29,34 @@
             <li><a href="/#contact">Contact</a></li>
             </ul>
         </nav>
+</header> -->
+
+<header>
+    <a href="/" class="logo"><i class="fab fa-node-js"></i> Kaustubh Manoj Darange</a>
+
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/#home">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#skills">Skills</a></li>
+            <li><a href="/#education">Education</a></li>
+            <li><a href="/#experience">Experience</a></li>
+            <li><a href="/#projects">Projects</a></li>
+            <li><a href="/#contact">Contact</a></li>
+            <!-- Added Resume Button -->
+            <li><a href="javascript:void(0)" onclick="viewResume()">Resume</a></li>
+        </ul>
+    </nav>
 </header>
+
+<script>
+    function viewResume() {
+        // Resume file path
+        window.open("Kaustubh_Darange_Resume.pdf", "_blank");
+    }
+</script>
+
 <!-- navbar ends -->
 
 <!-- 404 section start -->
