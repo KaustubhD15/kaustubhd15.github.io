@@ -89,7 +89,7 @@
     
     <!-- Content Section -->
     <div class="about-content">
-      <h3>I'm Kaustubh Darange</h3>
+      <h3>Kaustubh Manoj Darange</h3>
       <p>
         Hi, I am Kaustubh Darange, currently pursuing a Master's in Business Analytics & AI at the University of Texas in the Naveen Jindal School of Management.
       </p>
@@ -105,142 +105,101 @@
       <div class="contact-info">
         <p><i class="fas fa-envelope"></i> <a href="mailto:kaustubhdarange15@gmail.com">kaustubhdarange15@gmail.com</a></p>
         <p><i class="fas fa-map-marker-alt"></i> United States</p>
-    </div>    
+      </div>    
     </div>
   </div>
 </section>
 
+<head>
+
+
 <style>
   /* About Section Styles */
-
-  .about-content .contact-info a {
-  color: black; /* Set email link color to black */
-}
-
-.about-content .contact-info a:hover {
-  color: black; /* Ensure it stays black on hover */
-}
-
-.about-content .contact-info p {
-  color: black; /* Set location text color to black */
-}
-
-.about-content .contact-info p:hover {
-  color: black; /* Ensure the location text stays black on hover */
-}
-
-
-  .about {
-    padding: 60px 20px;
-    background-color: #f0f4fc; /* Light blue-gray background */
-    color: #333;
-    font-family: 'Arial', sans-serif;
-  }
-
-  .about .heading {
-    font-size: 5em;
-    color: #1a1a2e; /* Dark blue for headings */
-    text-align: center;
-    margin-bottom: 40px;
-  }
-
-  .about .heading span {
-    color: #fdda24; /* Bright yellow accent */
-  }
-
   .about-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  display: flex;
+  align-items: center; /* Centers the content vertically */
+  justify-content: center; /* Centers the content horizontally */
+  gap: 60px; /* Adjusted gap for better spacing */
+  max-width: 1000px; /* Reduced max-width to make the container narrower */
+  margin: 0 auto;
+  padding: 20px; /* Added padding for spacing */
+  height: 500; /* Allow height to adjust based on content */
+}
 
-  .about-image {
-    flex: 1;
-    max-width: 300px;
-  }
 
-  .about-image img {
-  width: 400px; /* Increased the width */
-  height: auto; /* Maintain aspect ratio */
+
+.about-image {
+  flex: 1;
+  max-width: 300px; /* Limit the width of the image */
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%; /* Ensure it scales with the container */
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 
-  .about-content {
-    flex: 2;
-    max-width: 700px;
-    background: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  }
-
-  .about-content h3 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    color: #1a1a2e;
-  }
-
-  .about-content p {
-    font-size:2em;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #555;
-  }
-
-  .about-content .contact-info {
-    margin-top: 20px;
-  }
-
-  .about-content .contact-info p {
-    display: flex;
-    align-items: center;
-    font-size: 1.1em;
-    margin: 5px 0;
-  }
-
-  .about-content .contact-info i {
-    margin-right: 10px;
-    color: #fdda24; /* Yellow icons */
-  }
-
-  .about-content a {
-    color: #1a73e8; /* Bright blue links */
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .about-content a:hover {
-    color: #0056b3; /* Darker blue on hover */
-  }
-
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .about-container {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .about-content {
-      padding: 20px;
-    }
-  }
-
-  .about-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 400px; /* Increased the gap between photo and content */
-  max-width: 1200px;
-  margin: 0 auto;
+.about-content {
+  flex: 2;
+  background: #fff;
+  padding: 20px; /* Added padding for spacing */
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
+.about-content h3 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  color: #3b80e1;
+}
+
+.about-content p {
+  font-size: 2em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #2f2c2c;
+}
+
+.about-content .contact-info p {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  margin: 5px 0;
+  color: black; /* Set black color for the text */
+}
+
+.about-content .contact-info i {
+  margin-right: 10px;
+  color: #e7c000; /* Yellow icons */
+}
+
+.about-content .contact-info a {
+  color: black; /* Set black color for the email link */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.about-content .contact-info a:hover {
+  color: black; /* Keep the black color on hover */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px; /* Reduce gap on smaller screens */
+  }
+
+  .about-image,
+  .about-content {
+    max-width: 100%; /* Make both containers full-width */
+  }
+}
 
 
 </style>
@@ -615,6 +574,20 @@
     </div>
   </div>
 
+<!-- Academic Projects Section -->
+<h3 class="sub-heading">Academic Projects</h3>
+<div class="box-container">
+
+  <!-- New Academic Project Tile -->
+  <div class="project-tile academic-project-tile" style="grid-row: 3; grid-column: 1;">
+    <a href="https://github.com/KaustubhD15/Customer-Churn-Analysis" target="_blank">
+        <img src="assets/images/projects/Customer-churn-analysis-image.webp" alt="Academic Project Image" class="project-image">
+        <h3 class="project-title">Customer churn Analysis</h3>
+    </a>
+  </div>
+</div>
+
+
   <!-- View All Projects Button -->
   <div class="viewall">
     <a href="https://github.com/KaustubhD15?tab=repositories" class="btn" target="_blank">
@@ -645,7 +618,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Four equal-width columns */
     grid-auto-rows: auto; /* Automatically adjust row height */
-    gap: 20px; /* Space between grid items */
+    gap: 10px; /* Space between grid items */
     justify-items: center; /* Center grid items horizontally */
     margin-bottom: 30px; /* Space below tiles */
   }
