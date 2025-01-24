@@ -113,96 +113,122 @@
 <head>
 
 
-<style>
-  /* About Section Styles */
-  .about-container {
-  display: flex;
-  align-items: center; /* Centers the content vertically */
-  justify-content: center; /* Centers the content horizontally */
-  gap: 60px; /* Adjusted gap for better spacing */
-  max-width: 1000px; /* Reduced max-width to make the container narrower */
-  margin: 0 auto;
-  padding: 20px; /* Added padding for spacing */
-  height: 500; /* Allow height to adjust based on content */
-}
-
-
-
-.about-image {
-  flex: 1;
-  max-width: 300px; /* Limit the width of the image */
-  text-align: center;
-}
-
-.about-image img {
-  width: 100%; /* Ensure it scales with the container */
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-
-.about-content {
-  flex: 2;
-  background: #fff;
-  padding: 20px; /* Added padding for spacing */
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-.about-content h3 {
-  font-size: 3em;
-  margin-bottom: 15px;
-  color: #3b80e1;
-}
-
-.about-content p {
-  font-size: 2em;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  color: #2f2c2c;
-}
-
-.about-content .contact-info p {
-  display: flex;
-  align-items: center;
-  font-size: 1.1em;
-  margin: 5px 0;
-  color: black; /* Set black color for the text */
-}
-
-.about-content .contact-info i {
-  margin-right: 10px;
-  color: #e7c000; /* Yellow icons */
-}
-
-.about-content .contact-info a {
-  color: black; /* Set black color for the email link */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.about-content .contact-info a:hover {
-  color: black; /* Keep the black color on hover */
-}
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px; /* Reduce gap on smaller screens */
-  }
-
-  .about-image,
-  .about-content {
-    max-width: 100%; /* Make both containers full-width */
-  }
-}
-
-
-</style>
+  <style>
+    /* About Section Styles */
+    .about-container {
+      display: flex;
+      align-items: center; /* Centers the content vertically */
+      justify-content: center; /* Centers the content horizontally */
+      gap: 60px; /* Adjusted gap for better spacing */
+      max-width: 1200px; /* Adjusted max-width for larger screens */
+      margin: 0 auto;
+      padding: 20px; /* Added padding for spacing */
+      height: auto; /* Allow height to adjust based on content */
+    }
+  
+    .about-image {
+      flex: 1;
+      max-width: 300px; /* Limit the width of the image */
+      text-align: center;
+    }
+  
+    .about-image img {
+      width: 100%; /* Ensure it scales with the container */
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  
+    .about-content {
+      flex: 2;
+      background: #fff;
+      padding: 20px; /* Added padding for spacing */
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+  
+    .about-content h3 {
+      font-size: 2.5em; /* Adjusted for better scaling */
+      margin-bottom: 15px;
+      color: #3b80e1;
+    }
+  
+    .about-content p {
+      font-size: 1.5em; /* Adjusted for better scaling */
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: #2f2c2c;
+    }
+  
+    .about-content .contact-info p {
+      display: flex;
+      align-items: center;
+      font-size: 1.1em;
+      margin: 5px 0;
+      color: black; /* Set black color for the text */
+    }
+  
+    .about-content .contact-info i {
+      margin-right: 10px;
+      color: #e7c000; /* Yellow icons */
+    }
+  
+    .about-content .contact-info a {
+      color: black; /* Set black color for the email link */
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+  
+    .about-content .contact-info a:hover {
+      color: black; /* Keep the black color on hover */
+    }
+  
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+        gap: 20px; /* Reduce gap on smaller screens */
+        padding: 15px; /* Adjust container padding */
+      }
+  
+      .about-image,
+      .about-content {
+        max-width: 100%; /* Make both containers full-width */
+      }
+  
+      .about-content {
+        padding: 15px; /* Reduce padding */
+      }
+  
+      .about-content h3 {
+        font-size: 2em; /* Smaller heading size */
+      }
+  
+      .about-content p {
+        font-size: 1.2em; /* Adjust paragraph size */
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .about-content h3 {
+        font-size: 1.8em; /* Further reduce heading size */
+      }
+  
+      .about-content p {
+        font-size: 1em; /* Smaller paragraph text */
+      }
+  
+      .about-container {
+        gap: 10px; /* Reduce gap further for smaller screens */
+      }
+  
+      .about-image img {
+        max-width: 90%; /* Prevent overscaling */
+      }
+    }
+  </style>
+  
 
 
 <!-- about section ends -->
