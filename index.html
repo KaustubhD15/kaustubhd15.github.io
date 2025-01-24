@@ -627,13 +627,14 @@
   /* Specific styles for the #projects section */
   #projects {
     background-color: #0a043c; 
-    padding: 50px 60px 20px;
+    padding: 40px 20px; /* Adjusted padding for responsiveness */
     text-align: center;
   }
 
   #projects .heading {
-    font-size: 4em;
+    font-size: 3em; /* Reduced size for better scaling */
     margin-bottom: 30px;
+    color: #fff; /* Ensure text color contrasts well */
   }
 
   #projects .heading span {
@@ -642,9 +643,8 @@
 
   #projects .box-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Four equal-width columns */
-    grid-auto-rows: auto; /* Automatically adjust row height */
-    gap: 10px; /* Space between grid items */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible columns */
+    gap: 20px; /* Space between grid items */
     justify-items: center; /* Center grid items horizontally */
     margin-bottom: 30px; /* Space below tiles */
   }
@@ -654,7 +654,8 @@
     border: 1px solid #444;
     border-radius: 10px;
     overflow: hidden;
-    width: 400px; /* Fixed width for consistent size */
+    width: 100%; /* Responsive width */
+    max-width: 350px; /* Prevent excessively large tiles */
     text-align: center;
     padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -673,7 +674,7 @@
   }
 
   #projects .project-title {
-    font-size: 2em;
+    font-size: 1.5em; /* Adjusted for better scaling */
     color: #fff; /* White text for project title */
     margin: 10px 0;
   }
@@ -709,11 +710,53 @@
   /* Sub-heading Styling */
   #projects .sub-heading {
     text-align: left;
-    font-size: 3em;
+    font-size: 2.5em; /* Adjusted size for responsiveness */
     color: #fdda24; /* Highlighted yellow text for visibility */
     margin-bottom: 20px;
     margin-left: 10px;
     margin-top: 20px; /* Added spacing from the previous heading */
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #projects {
+      padding: 30px 10px; /* Adjust padding for smaller screens */
+    }
+
+    #projects .heading {
+      font-size: 2.5em; /* Reduce heading size */
+    }
+
+    #projects .sub-heading {
+      font-size: 2em; /* Adjust sub-heading size */
+    }
+
+    #projects .box-container {
+      gap: 15px; /* Reduce gap between tiles */
+    }
+
+    #projects .project-title {
+      font-size: 1.3em; /* Adjust title size */
+    }
+
+    #projects .btn {
+      padding: 8px 15px; /* Smaller button padding */
+      font-size: 0.9em;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #projects .heading {
+      font-size: 2em; /* Further reduce heading size */
+    }
+
+    #projects .sub-heading {
+      font-size: 1.8em; /* Smaller sub-heading */
+    }
+
+    #projects .btn {
+      font-size: 0.8em; /* Smaller button size */
+    }
   }
 </style>
 
