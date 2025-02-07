@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Certifications</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #3b3b98);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px; /* Increased width for better alignment */
+            margin: 50px auto;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-in-out;
+        }
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 certifications in a row */
+            gap: 20px;
+            padding: 20px;
+        }
+        .certification-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+            animation: fadeInUp 1s ease-in-out;
+            text-align: center;
+        }
+        .certification-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+        .certification-image {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #ff4757;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        a:hover {
+            background: #e84118;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 1024px) {
+            .certifications-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+            }
+        }
+        @media (max-width: 600px) {
+            .certifications-grid {
+                grid-template-columns: repeat(1, 1fr); /* 1 column on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>My Certifications</h2>
+        <div class="certifications-grid">
+            <div class="certification-item">
+                <img src="assets/images/Certification/Business Process Improvement.png" alt="Certification 1" class="certification-image">
+                <h3>Business Process Improvement</h3>
+                <p>Issued by: Organization Name</p>
+                <p>Issue Date: January 2024</p>
+                <a href="assets/images/Business_Process_Improvement.pdf" target="_blank">View Certificate</a>
+            </div>
+
+            
+            <div class="certification-item">
+                <img src="assets/images/Certification/Scrum Master.png" alt="Certification 2" class="certification-image">
+                <h3>Scrum Master</h3>
+                <p>Issued by: Organization Name</p>
+                <p>Issue Date: March 2024</p>
+                <a href="assets/images/Scrum_Master.pdf" target="_blank">View Certificate</a>
+            </div>
+            <div class="certification-item">
+                <img src="assets/images/Certification/Selfawareness & Effective Leadership.png" alt="Certification 3" class="certification-image">
+                <h3>Selfawareness & Effective Leadership</h3>
+                <p>Issued by: Organization Name</p>
+                <p>Issue Date: May 2024</p>
+                <a href="assets/images/Selfawareness_Effective_Leadership.pdf" target="_blank">View Certificate</a>
+            </div>
+            <div class="certification-item">
+                <img src="assets/images/Certification/Job Success.png" alt="Certification 4" class="certification-image">
+                <h3>Job Success</h3>
+                <p>Issued by: Organization Name</p>
+                <p>Issue Date: June 2024</p>
+                <a href="assets/images/Job_Success.pdf" target="_blank">View Certificate</a>
+            </div>
+
+            <div class="certification-item">
+                <img src="assets/images/Certification/International Leadership.png" alt="Certification 4" class="certification-image">
+                <h3>International Leadership & Organizational Behaviour</h3>
+                <p>Issued by: Organization Name</p>
+                <p>Issue Date: June 2024</p>
+                <a href="assets/images/International_Leadership.pdf" target="_blank">View Certificate</a>
+            </div>
+            <!-- More certifications can be added similarly -->
+        </div>
+    </div>
+</body>
+</html>

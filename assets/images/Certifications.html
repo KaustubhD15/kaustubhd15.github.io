@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        /* Style for certifications section */
+        #certifications-section {
+            display: none; /* Initially hidden */
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+        }
+
+        .certification-item {
+            background-color: #e0e0e0;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .certification-item h3 {
+            font-size: 22px;
+            color: #333;
+        }
+
+        .certification-item p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .certification-item a {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .certification-item a:hover {
+            background-color: #555;
+        }
+
+        /* Dropdown and Menu Style */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="#">More</a>
+                <ul class="dropdown-content">
+                    <!-- Certification Link (click to toggle certifications section) -->
+                    <li><a href="#" onclick="toggleCertifications()">Certifications</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Certifications Section (Initially hidden) -->
+    <div id="certifications-section">
+        <h2>My Certifications</h2>
+        <div class="certification-item">
+            <h3>Certification 1</h3>
+            <p>Issued by: Organization Name</p>
+            <p>Issue Date: January 2024</p>
+            <a href="path-to-certification1.pdf" target="_blank">View Certificate</a>
+        </div>
+        <div class="certification-item">
+            <h3>Certification 2</h3>
+            <p>Issued by: Organization Name</p>
+            <p>Issue Date: December 2023</p>
+            <a href="path-to-certification2.pdf" target="_blank">View Certificate</a>
+        </div>
+        <!-- More certifications can be added here -->
+    </div>
+
+    <!-- JavaScript to Toggle Certifications Section -->
+    <script>
+        function toggleCertifications() {
+            var certificationsSection = document.getElementById('certifications-section');
+            
+            // Toggle visibility: show if hidden, hide if visible
+            if (certificationsSection.style.display === "none" || certificationsSection.style.display === "") {
+                certificationsSection.style.display = "block";  // Show the section
+            } else {
+                certificationsSection.style.display = "none";  // Hide the section
+            }
+        }
+    </script>
+
+</body>
+</html>

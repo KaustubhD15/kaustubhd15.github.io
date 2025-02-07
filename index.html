@@ -16,14 +16,8 @@
 </head>
 <body oncontextmenu="return false">
 
-<!-- pre loader -->
-<!-- <div class="loader-container">
-  <img draggable="false" src="./assets/images/preloader.gif" alt="">
-</div> -->
-
-<!-- navbar starts -->
 <header>
-  <a href="/" class="logo"></i>Kaustubh Manoj Darange</a>
+  <a href="/" class="logo">Kaustubh Manoj Darange</a>
 
   <div id="menu" class="fas fa-bars"></div>
   <nav class="navbar">
@@ -35,49 +29,175 @@
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
-          <!-- Added Resume Button -->
-          <li><a href="#" target="_blank" onclick="viewResume()">Resume</a></li>
+          
+            <!-- Dropdown for More -->
+            <li class="dropdown">
+              <a href="#" onclick="toggleDropdown()">More</a>
+              <ul class="dropdown-content" id="moreDropdown">
+                <li><a href="certifications.html">Certifications</a>
+                <li><a href="certifications.html">Publication</a>
+                </li>
+                <!-- Link to certifications.html -->
+              </ul>
+            </li>            
+            
+            <script>
+              // Traditional onclick function to toggle dropdown visibility
+              function toggleDropdown() {
+                  var dropdown = document.getElementById("moreDropdown");
+                  if (dropdown.style.display === "block") {
+                      dropdown.style.display = "none"; // Hide dropdown
+                  } else {
+                      dropdown.style.display = "block"; // Show dropdown
+                  }
+              }
+            </script>
+            
       </ul>
   </nav>
 </header>
 
-<script>
-  function viewResume() {
-      // Resume file path
-      window.open("assets/Kaustubh D. Resume .pdf", "_blank");
-  }
-</script>
 
-<!-- navbar ends -->
+<style>
+  
+/* Basic Navbar Styling */
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
 
+.navbar ul li {
+    position: relative;
+}
 
-<!-- hero section starts -->
-<section class="home" id="home">
-    <div id="particles-js"></div>
+/* Styling for navbar links */
+.navbar ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    color: black;
+}
 
-    <div class="content">
-    <h2>Hi There,<br/> I'm <span>Kaustubh Manoj Darange</span></h2>
-    <p>I'm <span class="typing-text"></span></p>
-    <a href="#about" class="btn"><span>About Me</span>
-      <i class="fas fa-arrow-circle-down"></i>
-    </a>
-    <div class="socials">
-        <ul class="social-icons">
-          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/kaustubh-darange/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
-          <li><a class="github" aria-label="GitHub" href="https://github.com/KaustubhD15" target="_blank"><i class="fab fa-github"></i></a></li>
-          <!-- <li><a class="medium" aria-label="Medium" href="https://medium.com/@vaishnavi.gawali29" target="_blank"><i class="fab fa-medium"></i></a></li>
-          <li><a class="hackerrank" aria-label="Hackerrank" href="https://www.hackerrank.com/profile/vaishnavigawali" target="_blank"><i class="fab fa-hackerrank"></i></a></li> -->
+/* Dropdown Container */
+.dropdown {
+    position: relative; /* Ensures dropdown is positioned correctly */
+}
+
+/* Dropdown Content (Initially Hidden) */
+.dropdown-content {
+    display: none; /* Ensures it's hidden by default */
+    position: absolute;
+    background-color: white;
+    /* min-width: 150px; */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensures it's above other elements */
+    padding: 0;
+    flex-direction: column; /* Stack items vertically */
+    opacity: 0; /* Makes it invisible */
+    visibility: hidden; /* Prevents accidental interaction */
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+/* Show Dropdown Only on Hover */
+.dropdown:hover .dropdown-content {
+    display: flex; /* Display as flexbox */
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Allow interaction */
+}
+
+/* Dropdown Items */
+.dropdown-content li {
+    display: block;
+    width: 100%;
+}
+
+.dropdown-content li a {
+    padding: 10px;
+    display: block;
+    color: black;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+</style>
+
+<section> 
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="keywords" content="Kaustubh Manoj Darange, portfolio, Kaustubh, Data Analyst, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
+      <meta name="description" content="Welcome to Kaustubh Darange's Portfolio. Data Analyst" />
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="./assets/css/style.css">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!-- Favicon -->
+      <!--link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png"-->
+      <title>Kaustubh's Portfolio</title>
+  </head>
+  <body oncontextmenu="return false">
+  
+
+  <header>
+    <a href="/" class="logo">Kaustubh Manoj Darange</a>
+  
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- More Dropdown -->
+            <li class="dropdown">
+              <a href="#">More</a>
+              <ul class="dropdown-content">
+                  <!-- Show certifications section when clicked -->
+                  <li><a href="certifications.html">Certifications</a></li>
+                  <li><a href="publication.html">Publication</a></li>
+              </ul>
+          </li>
         </ul>
-      </div>
+    </nav>
+  </header>
+  
+  <!-- navbar ends -->
+  
+  
+  <!-- hero section starts -->
+<section class="home" id="home">
+  <div id="particles-js"></div>
+
+  <div class="content">
+  <h2>Hi There,<br/> I'm <span>Kaustubh Manoj Darange</span></h2>
+  <p>I'm <span class="typing-text"></span></p>
+  <a href="#about" class="btn"><span>About Me</span>
+    <i class="fas fa-arrow-circle-down"></i>
+  </a>
+  <div class="socials">
+      <ul class="social-icons">
+        <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/kaustubh-darange/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
+        <li><a class="github" aria-label="GitHub" href="https://github.com/KaustubhD15" target="_blank"><i class="fab fa-github"></i></a></li>
+        <!-- <li><a class="medium" aria-label="Medium" href="https://medium.com/@vaishnavi.gawali29" target="_blank"><i class="fab fa-medium"></i></a></li>
+        <li><a class="hackerrank" aria-label="Hackerrank" href="https://www.hackerrank.com/profile/vaishnavigawali" target="_blank"><i class="fab fa-hackerrank"></i></a></li> -->
+      </ul>
     </div>
+  </div>
 <div class="image">
-    <img draggable="false" class="tilt" src="assets/images/Commissioned Illustration_2020 Summer - Jiaqi Wang.gif" alt="">
+  <img draggable="false" class="tilt" src="assets/images/Commissioned Illustration_2020 Summer - Jiaqi Wang.gif" alt="">
 </div>
 </section>
 <!-- hero section ends -->
 
-
-<!-- about section starts -->
+  
+  
+  <!-- about section starts -->
 <section class="about" id="about">
   <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
   
@@ -116,15 +236,17 @@
   <style>
     /* About Section Styles */
     .about-container {
-      display: flex;
-      align-items: center; /* Centers the content vertically */
-      justify-content: center; /* Centers the content horizontally */
-      gap: 60px; /* Adjusted gap for better spacing */
-      max-width: 1200px; /* Adjusted max-width for larger screens */
-      margin: 0 auto;
-      padding: 20px; /* Added padding for spacing */
-      height: auto; /* Allow height to adjust based on content */
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    width: 100%; /* Fix invalid width */
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+    height: auto;
+}
+
   
     .about-image {
       flex: 1;
@@ -228,12 +350,10 @@
       }
     }
   </style>
+
+  <!-- about section ends -->
   
-
-
-<!-- about section ends -->
-
-<!-- skills section starts -->
+ <!-- skills section starts -->
 <section class="skills" id="skills">
 
   <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & Abilities</h2>
@@ -579,341 +699,345 @@
 
 <!-- work project section ends -->
 
-
-<!-- education section starts -->
-<section class="education" id="education">
-
-  <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
-
-    <div class="box-container">
-
+  <!-- education section starts -->
+  <section class="education" id="education">
+  
+    <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
+  
+      <div class="box-container">
+  
+        <div class="box">
+          <div class="image">
+          <img draggable="false" src="./assets/images/educat/UTD_logo.png" alt="">
+          </div>
+          <div class="content">
+          <h3>MS in Business Analytics & AI</h3>
+          <p>The University of Texas at Dallas |  Richardson, Texas, USA</p>
+          <h4>Aug 2024 - May 2026 </h4>
+          </div>
+      </div>
+  
       <div class="box">
         <div class="image">
-        <img draggable="false" src="./assets/images/educat/UTD_logo.png" alt="">
+        <img draggable="false" src="./assets/images/educat/MU_logo.jpg" alt="">
         </div>
         <div class="content">
-        <h3>MS in Business Analytics & AI</h3>
-        <p>The University of Texas at Dallas |  Richardson, Texas, USA</p>
-        <h4>Aug 2024 - May 2026 </h4>
-        </div>
-    </div>
-
-    <div class="box">
-      <div class="image">
-      <img draggable="false" src="./assets/images/educat/MU_logo.jpg" alt="">
-      </div>
-      <div class="content">
-      <h3>B.Eng in Mechanical Engineering</h3>
-      <p>University of Mumbai | Mumbai, India</p>
-      <h4> Jul 2018 - Jul 2022</h4>
-      </div>
-    </div>
-
-</div>
-</section>
-<!-- education section ends -->
-
-
-<!-- experience section starts -->
-<section class="experience" id="experience">
-
-  <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
-
-  <div class="timeline">
-
-      <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>The University of Texas at Dallas - RNL | Aug 2024 - Present</h2>
-        </div>
-        <div class="desc">
-          <br>
-          <h3><strong>Engagement Ambassidor| United States | OnCampus  </strong></h3>
-          <br>
-          <!-- <h3><strong>Company Overview:</strong></h3>
-          <p style="font-size: 14px;">
-            JerseySTEM promotes education of Science, Technology, Engineering and Math for middle school students.
-          </p> -->
-          
-          <h3><strong>My Role:</strong></h3>
-          <ul style="font-size: 14px; margin-left: 1.5rem;">
-            <li> Utilized RNL Engage software to contact over 500 constituents from the University of Texas at Dallas via telephone, text, and video, resulting in a 35% increase in donor engagement.
-            </li>
-            <li>Updated demographic information for 200 constituents in the database using proprietary software, ensuring accurate and up-to-date records for future outreach efforts.</li>
-            <li>Demonstrated proficiency in processing financial transactions for donations from University at Buffalo constituents through RNL Engage software training and mentorship program, resulting in a 53% increase in donation processing efficiency.</li>
-          </ul>
-          
-          <!-- <h3><strong>Tech Stack:</strong></h3>
-          <p style="font-size: 14px;">Looker Studio, Google Sheets, MySQL, ETL</p> -->
+        <h3>B.Eng in Mechanical Engineering</h3>
+        <p>University of Mumbai | Mumbai, India</p>
+        <h4> Jul 2018 - Jul 2022</h4>
         </div>
       </div>
-    </div>    
   
-  
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>Centre for computational Technologies (CCTech)| Jan 2023 - July 2024 </h2>
-        </div>
-        <div class="desc">
-          <br>
-          <h3><strong>Business Analyst & Marketing Executive | India | Full-Time </strong></h3>
-          <br>
-          <!-- <h3><strong>Company Overview:</strong></h3> -->
-          <!-- <p style="font-size: 14px;">
-            At UTD, I worked for an investment firm client looking to enter the EV market.
-          </p> -->
-          
-          <h3><strong>My Role:</strong></h3>
-          <ul style="font-size: 14px; margin-left: 1.5rem;">
-            <li>Conducted data analysis of business development activities using <strong>CRM</strong>, identifying key market trends and improving the lead
-              conversion by 20%. </li>
-            <li>Developed and delivered data-driven insights for top management by creating visually compelling dashboards
-              and reports using <strong>Tableau</strong> and <strong>Power BI</strong>, enabling informed strategic actions through comprehensive quarterly
-              reports summarizing key performance metrics.</li>
-            <li>Developed and implemented <strong>data-driven strategies</strong>, optimizing marketing operations in line with <strong>Balanced Scorecard (BSC)
-              metrics</strong>.</li> 
-            <li>Coordinated with cross-functional teams to solve technical issues, optimize system performance, and increase user
-                  satisfaction.</li>
-            <li>Led a <strong>team of 5</strong> in creating dashboards and reports to track key performance metrics, contributing to a <strong>40%</strong> increase in social
-                media visibility.</li>
-            <li>Managed outsourced vendors and marketing agencies, ensuring data analytics efforts aligned with business objectives.</li>
-          </ul>
-          
-          <h3><strong>Tech Stack:</strong></h3>
-          <p style="font-size: 14px;">CRM, Tableau, Power BI, Analytics, BSC, Strategic approach, Business excellence</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>Centre for computational Technologies (CCTech)  | July 2022 - January 2023</h2>
-        </div>
-        <div class="desc">
-          <br>
-          <h3><strong>Member of Technical Staff | India | Full-Time</strong></h3>
-          <br>
-          <h3><strong>Company Overview:</strong></h3>
-          <p style="font-size: 14px;">
-            I worked on python based OCR engine. 
-          </p>
-          
-          <h3><strong>My Role:</strong></h3>
-          <ul style="font-size: 14px; margin-left: 1.5rem;">
-            <li> Built a <strong>Python-based OCR engine</strong>, reducing manual text detection efforts by 50% and improving operational efficiency.</li>
-            <li>Leveraged data insights to improve operational efficiency, reducing processing time by 40%.</li>
-          </ul>
-          
-          <h3><strong>Tech Stack:</strong></h3>
-          <p style="font-size: 14px;">Python, Postman, Git, Json, CSS, HTML</p>
-        </div>
-      </div>
-    </div>  
-    
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>Centre for computational Technologies (CCTech) | June 2022 - July 2022</h2>
-        </div>
-        <div class="desc">
-          <br>
-          <h3><strong>Intern | India | Full-Time</strong></h3>
-          <br>
-          <h3><strong>Company Overview:</strong></h3>
-          <p style="font-size: 14px;">
-            I was responsible for developing POC for text detection.
-          </p>
-          
-          <h3><strong>My Role:</strong></h3>
-          <ul style="font-size: 14px; margin-left: 1.5rem;">
-            <li> Conducted data labeling to improve OCR engine automation, <strong>increasing accuracy by 82.67%</strong> and enhancing overall system
-              reliability.</li>
-            <li>Streamlined workflows and improved operational efficiency, contributing upto a 65% increase in business revenue.</li>
-          </ul>
-          
-          <h3><strong>Tech Stack:</strong></h3>
-          <p style="font-size: 14px;"> Python, Postman, Git, Json, CSS, HTML</p>
-        </div>
-      </div>
-    </div>  
-
-   
-
-</div>
-
-</section>
-<!-- experience section ends -->
-
-
-
-<!-- projects section starts -->
-<!-- projects section starts -->
-<!-- <section class="work" id="projects">
-
-  <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
-  
-  <div class="box-container"></div> 
-<div class="viewall">
-  <a href="https://github.com/KaustubhD15?tab=repositories" class="btn" target="_blank">
-    <span>View All Projects</span>
-    <i class="fas fa-arrow-right"></i>
-  </a>
-</div>
-
-
-</section> -->
-
-
-<!-- footer section starts -->
-<section class="footer">
-  <div class="box-container">
-    <div class="box">
-      <h3>Kaustubh Darange's Portfolio</h3>
-      <p>Thank you for visiting my personal portfolio website. </br>Connect with me over socials.</p>
-    </div>
-
-    <div class="box">
-      <h3>quick links</h3>
-      <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-      <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-      <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
-      <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
-      <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
-      <a href="#projects"><i class="fas fa-chevron-circle-right"></i> projects</a>
-    </div>
-
-    <div class="box">
-      <h3>contact info</h3>
-      <p class="contact-info">
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:kaustubhdarange15@gmail.com" onclick="handleMailClick()">kaustubhdarange15@gmail.com</a>
-      </p>
-      <p class="contact-info">
-        <i class="fas fa-map-marked-alt"></i> United States
-      </p>
-      <div class="share">
-        <a href="https://www.linkedin.com/in/kaustubh-darange/" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
-        <a href="https://github.com/KaustubhD15" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
-      </div>
-    </div>
   </div>
+  </section>
+  <!-- education section ends -->
+  
+  
+  <!-- experience section starts -->
+  <section class="experience" id="experience">
+  
+    <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
+  
+    <div class="timeline">
+  
+        <div class="container right">
+        <div class="content">
+          <div class="tag">
+            <h2>The University of Texas at Dallas - RNL | Aug 2024 - Present</h2>
+          </div>
+          <div class="desc">
+            <br>
+            <h3><strong>Engagement Ambassidor| United States | OnCampus  </strong></h3>
+            <br>
+            <!-- <h3><strong>Company Overview:</strong></h3>
+            <p style="font-size: 14px;">
+              JerseySTEM promotes education of Science, Technology, Engineering and Math for middle school students.
+            </p> -->
+            
+            <h3><strong>My Role:</strong></h3>
+            <ul style="font-size: 14px; margin-left: 1.5rem;">
+              <li> Utilized RNL Engage software to contact over 500 constituents from the University of Texas at Dallas via telephone, text, and video, resulting in a 35% increase in donor engagement.
+              </li>
+              <li>Updated demographic information for 200 constituents in the database using proprietary software, ensuring accurate and up-to-date records for future outreach efforts.</li>
+              <li>Demonstrated proficiency in processing financial transactions for donations from University at Buffalo constituents through RNL Engage software training and mentorship program, resulting in a 53% increase in donation processing efficiency.</li>
+            </ul>
+            
+            <!-- <h3><strong>Tech Stack:</strong></h3>
+            <p style="font-size: 14px;">Looker Studio, Google Sheets, MySQL, ETL</p> -->
+          </div>
+        </div>
+      </div>    
+    
+    
+      <div class="container left">
+        <div class="content">
+          <div class="tag">
+            <h2>Centre for computational Technologies (CCTech)| Jan 2023 - July 2024 </h2>
+          </div>
+          <div class="desc">
+            <br>
+            <h3><strong>Business Analyst & Marketing Executive | India | Full-Time </strong></h3>
+            <br>
+            <!-- <h3><strong>Company Overview:</strong></h3> -->
+            <!-- <p style="font-size: 14px;">
+              At UTD, I worked for an investment firm client looking to enter the EV market.
+            </p> -->
+            
+            <h3><strong>My Role:</strong></h3>
+            <ul style="font-size: 14px; margin-left: 1.5rem;">
+              <li>Conducted data analysis of business development activities using <strong>CRM</strong>, identifying key market trends and improving the lead
+                conversion by 20%. </li>
+              <li>Developed and delivered data-driven insights for top management by creating visually compelling dashboards
+                and reports using <strong>Tableau</strong> and <strong>Power BI</strong>, enabling informed strategic actions through comprehensive quarterly
+                reports summarizing key performance metrics.</li>
+              <li>Developed and implemented <strong>data-driven strategies</strong>, optimizing marketing operations in line with <strong>Balanced Scorecard (BSC)
+                metrics</strong>.</li> 
+              <li>Coordinated with cross-functional teams to solve technical issues, optimize system performance, and increase user
+                    satisfaction.</li>
+              <li>Led a <strong>team of 5</strong> in creating dashboards and reports to track key performance metrics, contributing to a <strong>40%</strong> increase in social
+                  media visibility.</li>
+              <li>Managed outsourced vendors and marketing agencies, ensuring data analytics efforts aligned with business objectives.</li>
+            </ul>
+            
+            <h3><strong>Tech Stack:</strong></h3>
+            <p style="font-size: 14px;">CRM, Tableau, Power BI, Analytics, BSC, Strategic approach, Business excellence</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="container right">
+        <div class="content">
+          <div class="tag">
+            <h2>Centre for computational Technologies (CCTech)  | July 2022 - January 2023</h2>
+          </div>
+          <div class="desc">
+            <br>
+            <h3><strong>Member of Technical Staff | India | Full-Time</strong></h3>
+            <br>
+            <h3><strong>Company Overview:</strong></h3>
+            <p style="font-size: 14px;">
+              I worked on python based OCR engine. 
+            </p>
+            
+            <h3><strong>My Role:</strong></h3>
+            <ul style="font-size: 14px; margin-left: 1.5rem;">
+              <li> Built a <strong>Python-based OCR engine</strong>, reducing manual text detection efforts by 50% and improving operational efficiency.</li>
+              <li>Leveraged data insights to improve operational efficiency, reducing processing time by 40%.</li>
+            </ul>
+            
+            <h3><strong>Tech Stack:</strong></h3>
+            <p style="font-size: 14px;">Python, Postman, Git, Json, CSS, HTML</p>
+          </div>
+        </div>
+      </div>  
+      
+      <div class="container left">
+        <div class="content">
+          <div class="tag">
+            <h2>Centre for computational Technologies (CCTech) | June 2022 - July 2022</h2>
+          </div>
+          <div class="desc">
+            <br>
+            <h3><strong>Intern | India | Full-Time</strong></h3>
+            <br>
+            <h3><strong>Company Overview:</strong></h3>
+            <p style="font-size: 14px;">
+              I was responsible for developing POC for text detection.
+            </p>
+            
+            <h3><strong>My Role:</strong></h3>
+            <ul style="font-size: 14px; margin-left: 1.5rem;">
+              <li> Conducted data labeling to improve OCR engine automation, <strong>increasing accuracy by 82.67%</strong> and enhancing overall system
+                reliability.</li>
+              <li>Streamlined workflows and improved operational efficiency, contributing upto a 65% increase in business revenue.</li>
+            </ul>
+            
+            <h3><strong>Tech Stack:</strong></h3>
+            <p style="font-size: 14px;"> Python, Postman, Git, Json, CSS, HTML</p>
+          </div>
+        </div>
+      </div>  
+  
+     
+  
+  </div>
+  
+  </section>
+  <!-- experience section ends -->
+  
+  
+  
+  <!-- projects section starts -->
+  <!-- projects section starts -->
+  <!-- <section class="work" id="projects">
+  
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+    
+    <div class="box-container"></div> 
+  <div class="viewall">
+    <a href="https://github.com/KaustubhD15?tab=repositories" class="btn" target="_blank">
+      <span>View All Projects</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+  
+  
+  </section> -->
+  
+  
+  <!-- footer section starts -->
+  <section class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>Kaustubh Darange's Portfolio</h3>
+        <p>Thank you for visiting my personal portfolio website. </br>Connect with me over socials.</p>
+      </div>
+  
+      <div class="box">
+        <h3>quick links</h3>
+        <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+        <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+        <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
+        <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
+        <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
+        <a href="#projects"><i class="fas fa-chevron-circle-right"></i> projects</a>
+      </div>
+  
+      <div class="box">
+        <h3>contact info</h3>
+        <p class="contact-info">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:kaustubhdarange15@gmail.com" onclick="handleMailClick()">kaustubhdarange15@gmail.com</a>
+        </p>
+        <p class="contact-info">
+          <i class="fas fa-map-marked-alt"></i> United States
+        </p>
+        <div class="share">
+          <a href="https://www.linkedin.com/in/kaustubh-darange/" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
+          <a href="https://github.com/KaustubhD15" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    /* Footer Section Styles */
+    .footer {
+      background-color: #1a1a2e; /* Deep dark blue background color */
+      color: #ffffff; /* Light gray text color */
+      padding: 30px 40px;
+      text-align: left;
+    }
+  
+    .footer .box-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  
+    .footer .box {
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+    }
+  
+    .footer .box h3 {
+      color: #fdda24; /* Highlighted yellow text for headings */
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+  
+    .footer .box p {
+      line-height: 1.8;
+    }
+  
+    .footer .box a {
+      display: block;
+      margin: 5px 0;
+      color: #f5f5f5; /* Light gray text for links */
+      text-decoration: none;
+      font-size: 1em;
+      transition: color 0.3s;
+    }
+  
+    .footer .box a:hover {
+      color: #fdda24; /* Highlighted yellow color on hover */
+    }
+  
+    .footer .share a {
+      font-size: 1.5em;
+      color: #f5f5f5;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+  
+    .footer .share a:hover {
+      color: #fdda24;
+    }
+  
+    /* Contact Info Styles */
+    .contact-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      line-height: 1.8;
+    }
+  
+    .contact-info i {
+      font-size: 1.2em; /* Adjust icon size */
+      color: #fdda24; /* Match the yellow highlight color */
+    }
+  
+    .contact-info a {
+      color: #f5f5f5;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+  
+    .contact-info a:hover {
+      color: #fdda24; /* Highlighted yellow color on hover */
+    }
+  </style>
+  
+  <!-- footer section ends -->
+  
+  
+  <!-- scroll top btn -->
+  <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+  <!-- scroll back to top -->
+  
+  
+  <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+  <!-- jquery cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- typed.js cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- particle.js links -->
+  <script src="./assets/js/particles.min.js"></script>
+  <script src="./assets/js/app.js"></script>
+  
+  <!-- vanilla tilt.js links -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- scroll reveal anim -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  
+  <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+      ></script>
+  
+  <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+  
+  <script src="./assets/js/script.js"></script>
+  
+  </body>
+  </html>
+
 </section>
-
-<style>
-  /* Footer Section Styles */
-  .footer {
-    background-color: #1a1a2e; /* Deep dark blue background color */
-    color: #ffffff; /* Light gray text color */
-    padding: 30px 40px;
-    text-align: left;
-  }
-
-  .footer .box-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-  }
-
-  .footer .box {
-    flex: 1;
-    min-width: 250px;
-    max-width: 300px;
-  }
-
-  .footer .box h3 {
-    color: #fdda24; /* Highlighted yellow text for headings */
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-
-  .footer .box p {
-    line-height: 1.8;
-  }
-
-  .footer .box a {
-    display: block;
-    margin: 5px 0;
-    color: #f5f5f5; /* Light gray text for links */
-    text-decoration: none;
-    font-size: 1em;
-    transition: color 0.3s;
-  }
-
-  .footer .box a:hover {
-    color: #fdda24; /* Highlighted yellow color on hover */
-  }
-
-  .footer .share a {
-    font-size: 1.5em;
-    color: #f5f5f5;
-    margin: 0 10px;
-    transition: color 0.3s;
-  }
-
-  .footer .share a:hover {
-    color: #fdda24;
-  }
-
-  /* Contact Info Styles */
-  .contact-info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    line-height: 1.8;
-  }
-
-  .contact-info i {
-    font-size: 1.2em; /* Adjust icon size */
-    color: #fdda24; /* Match the yellow highlight color */
-  }
-
-  .contact-info a {
-    color: #f5f5f5;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-
-  .contact-info a:hover {
-    color: #fdda24; /* Highlighted yellow color on hover */
-  }
-</style>
-
-<!-- footer section ends -->
+<!-- navbar ends -->
 
 
-<!-- scroll top btn -->
-<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
-<!-- scroll back to top -->
-
-
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-<!-- jquery cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- typed.js cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- particle.js links -->
-<script src="./assets/js/particles.min.js"></script>
-<script src="./assets/js/app.js"></script>
-
-<!-- vanilla tilt.js links -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- scroll reveal anim -->
-<script src="https://unpkg.com/scrollreveal"></script>
-
-<script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
-
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
-
-<script src="./assets/js/script.js"></script>
-
-</body>
-</html>
