@@ -16,6 +16,7 @@
 </head>
 <body oncontextmenu="return false">
 
+  <!-- navbar starts -->
 <header>
   <a href="/" class="logo">Kaustubh Manoj Darange</a>
 
@@ -35,7 +36,7 @@
               <a href="#" onclick="toggleDropdown()">More</a>
               <ul class="dropdown-content" id="moreDropdown">
                 <li><a href="certifications.html">Certifications</a>
-                <li><a href="certifications.html">Publication</a>
+                <!-- <li><a href="certifications.html">Publication</a> -->
                 </li>
                 <!-- Link to certifications.html -->
               </ul>
@@ -64,13 +65,13 @@
 .navbar ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     display: flex;
 }
 
 .navbar ul li {
     position: relative;
-}
+} */
 
 /* Styling for navbar links */
 .navbar ul li a {
@@ -119,54 +120,7 @@
     color: black;
     white-space: nowrap; /* Prevents text wrapping */
 }
-</style>
-
-<section> 
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="keywords" content="Kaustubh Manoj Darange, portfolio, Kaustubh, Data Analyst, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
-      <meta name="description" content="Welcome to Kaustubh Darange's Portfolio. Data Analyst" />
-      <!-- Custom CSS -->
-      <link rel="stylesheet" href="./assets/css/style.css">
-      <!-- Font Awesome -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <!-- Favicon -->
-      <!--link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png"-->
-      <title>Kaustubh's Portfolio</title>
-  </head>
-  <body oncontextmenu="return false">
-  
-
-  <header>
-    <a href="/" class="logo">Kaustubh Manoj Darange</a>
-  
-    <div id="menu" class="fas fa-bars"></div>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <!-- More Dropdown -->
-            <li class="dropdown">
-              <a href="#">More</a>
-              <ul class="dropdown-content">
-                  <!-- Show certifications section when clicked -->
-                  <li><a href="certifications.html">Certifications</a></li>
-                  <li><a href="publication.html">Publication</a></li>
-              </ul>
-          </li>
-        </ul>
-    </nav>
-  </header>
-  
+</style>  
   <!-- navbar ends -->
   
   
@@ -197,7 +151,7 @@
 
   
   
-  <!-- about section starts -->
+<!-- about section starts -->
 <section class="about" id="about">
   <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
   
@@ -236,17 +190,15 @@
   <style>
     /* About Section Styles */
     .about-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    width: 100%; /* Fix invalid width */
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0px;
-    height: auto;
-}
-
+      display: flex;
+      align-items: center; /* Centers the content vertically */
+      justify-content: center; /* Centers the content horizontally */
+      gap: 60px; /* Adjusted gap for better spacing */
+      max-width: 1200px; /* Adjusted max-width for larger screens */
+      margin: 0 auto;
+      padding: 20px; /* Added padding for spacing */
+      height: auto; /* Allow height to adjust based on content */
+    }
   
     .about-image {
       flex: 1;
@@ -351,7 +303,9 @@
     }
   </style>
 
-  <!-- about section ends -->
+
+<!-- about section ends -->
+
   
  <!-- skills section starts -->
 <section class="skills" id="skills">
