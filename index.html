@@ -837,7 +837,97 @@
   
   
   </section> -->
-  
+
+
+<!-- Recommendation section starts -->
+ <body> 
+<section class="recommendations">
+  <div class="box-container">
+    <div class="recommendation-box">Recommendation 1</div>
+    <div class="recommendation-box">Recommendation 2</div>
+    <div class="recommendation-box">Recommendation 3</div>
+    <div class="recommendation-box">Recommendation 4</div>
+    <!-- Add as many recommendations as needed -->
+  </div>
+  <!-- Right arrow button -->
+  <button class="arrow-right" onclick="moveNext()">→</button>
+  <!-- Left arrow button -->
+  <button class="arrow-left" onclick="movePrev()">←</button>
+</section>
+<script src="script.js"></script>
+</body>
+<style>
+.recommendations {
+  background-color: #5389cb; /* Deep dark blue background */
+  color: #ffffff; /* White text */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove any margin */
+  height: 450px; /* Height for visible area */
+  min-height: 450px; /* Prevents content from stretching */
+  max-height: 450px; /* Limits the max height */
+  display: flex;
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  overflow: hidden; /* Hide overflow for the sliding effect */
+  position: relative; /* Positioning context for the arrow button */
+}
+
+.recommendations .box-container {
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth transition for sliding */
+  width: 100%; /* The container takes 100% of the width */
+  height: 100%;
+}
+
+.recommendations .recommendation-box {
+  flex: 0 0 100%; /* Each box takes up 100% of the container width */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* White background for each box */
+  color: #000000; /* Text color */
+  border: 1px solid #ddd; /* Border for the recommendation box */
+  box-sizing: border-box;
+}
+
+.arrow-right,
+.arrow-left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #dc1212;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow-right {
+  right: 20px; /* Position the arrow on the right side */
+}
+
+.arrow-left {
+  left: 20px; /* Position the arrow on the left side */
+}
+
+.arrow-right:hover,
+.arrow-left:hover {
+  color: #de1010; /* Change color on hover */
+}
+</style>
+
+
+
+
+
+
+
+
+<!-- Recommendation section ends -->
+
+
   
   <!-- footer section starts -->
   <section class="footer">

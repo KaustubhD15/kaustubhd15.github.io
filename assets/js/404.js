@@ -24,3 +24,21 @@ document.onkeydown = function(e) {
      return false;
   }
 }
+
+
+
+let currentIndex = 0; // Tracks the current visible recommendation
+
+function moveNext() {
+  const boxContainer = document.querySelector(".box-container");
+  const boxes = document.querySelectorAll(".recommendation-box");
+  currentIndex = (currentIndex + 1) % boxes.length; // Move to the next box
+  boxContainer.style.transform = `translateX(-${currentIndex * 100}%)`; // Slide to the next box
+}
+
+function movePrev() {
+  const boxContainer = document.querySelector(".box-container");
+  const boxes = document.querySelectorAll(".recommendation-box");
+  currentIndex = (currentIndex - 1 + boxes.length) % boxes.length; // Move to the previous box
+  boxContainer.style.transform = `translateX(-${currentIndex * 100}%)`; // Slide to the previous box
+}
