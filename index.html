@@ -694,10 +694,43 @@
   
     <div class="timeline">
   
+        <div class="container left">
+        <div class="content">
+          <div class="tag">
+            <h2> Tenet Healthcare | June 2025 - Present </h2>
+          </div>
+          <div class="desc">
+            <br>
+            <h3><strong>Data Engineer | United States | Onsite  </strong></h3>
+            <br>
+            <!-- <h3><strong>Company Overview:</strong></h3>
+            <p style="font-size: 14px;">
+              JerseySTEM promotes education of Science, Technology, Engineering and Math for middle school students.
+            </p> -->
+            
+            <h3><strong>My Role:</strong></h3>
+            <ul style="font-size: 14px; margin-left: 1.5rem;">
+<li>Developed and maintained <strong>ETL pipelines</strong> using Python and SQL to streamline data processing for analytics teams.</li>
+<li>Collaborated with cross-functional teams to clean, transform, and standardize healthcare datasets, improving data quality and usability.</li>
+<li>Migrated analytics workloads from <strong>IBM DB2</strong> to <strong>Google BigQuery</strong>, offloading reports from Conifer’s live operational system and improving query performance by 40%.</li>
+<li><strong>Converted 100+</strong> legacy DB2 stored procedures into optimized BigQuery SQL, enabling scalable ELT transformations and reducing maintenance overhead.</li>
+<li>Collaborated with cross-functional teams to clean and <strong>standardize 10M+ healthcare records</strong>, improving data quality and usability by 30% for reporting and compliance.</li>
+<li><strong>Automated routine ingestion and reporting workflows</strong>, cutting 30% manual effort and reducing reporting errors by 20%.</li>
+<li>Performed <strong>data validation and QA checks</strong> on large-scale healthcare datasets, ensuring 99%+ data accuracy during migration.</li>
+<li>Strengthened team efficiency by contributing to Git-based version control workflows and agile sprint cycles, accelerating delivery of data migration milestones by 15%.</li>
+            </ul>
+            
+            <!-- <h3><strong>Tech Stack:</strong></h3>
+            <p style="font-size: 14px;">Looker Studio, Google Sheets, MySQL, ETL</p> -->
+          </div>
+        </div>
+      </div> 
+
+
         <div class="container right">
         <div class="content">
           <div class="tag">
-            <h2>The University of Texas at Dallas - RNL | Aug 2024 - Present</h2>
+            <h2>The University of Texas at Dallas - RNL | Aug 2024 - May 2025 </h2>
           </div>
           <div class="desc">
             <br>
@@ -840,93 +873,202 @@
 
 
 <!-- Recommendation section starts -->
- <body> 
-<section class="recommendations">
-  <div class="box-container">
-    <div class="recommendation-box">Recommendation 1</div>
-    <div class="recommendation-box">Recommendation 2</div>
-    <div class="recommendation-box">Recommendation 3</div>
-    <div class="recommendation-box">Recommendation 4</div>
-    <!-- Add as many recommendations as needed -->
-  </div>
-  <!-- Right arrow button -->
-  <button class="arrow-right" onclick="moveNext()">→</button>
-  <!-- Left arrow button -->
-  <button class="arrow-left" onclick="movePrev()">←</button>
-</section>
-<script src="script.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation Carousel</title>
+    <style>
+        .recommendations {
+            background-color: #5389cb;
+            color: #ffffff;
+            padding: 0;
+            margin: 0;
+            height: 450px;
+            min-height: 450px;
+            max-height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .recommendations .box-container {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 100%;
+            height: 100%;
+        }
+
+        .recommendations .recommendation-box {
+            flex: 0 0 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        .recommendation-box .content {
+            text-align: center;
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .recommendation-box p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .person-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .designation {
+            font-weight: bold;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .indicators {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .indicator.active {
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Recommendation section starts -->
+    <section class="recommendations">
+        <div class="box-container" id="carouselContainer">
+            <!-- Recommendation 1 -->
+            <div class="recommendation-box">
+                <div class="content">
+                    <p>"Kaustubh's analytical mindset and problem-solving skills have consistently driven impactful results."</p>
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Person 1" class="person-img">
+                    <div class="designation">John Smith<br>Senior Data Scientist</div>
+                </div>
+            </div>
+
+            <!-- Recommendation 2 -->
+            <div class="recommendation-box">
+                <div class="content">
+                    <p>"A true team player who brings creativity and clarity to every project he works on."</p>
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Person 2" class="person-img">
+                    <div class="designation">Emily Johnson<br>Marketing Manager</div>
+                </div>
+            </div>
+
+            <!-- Recommendation 3 -->
+            <div class="recommendation-box">
+                <div class="content">
+                    <p>"Kaustubh has the rare ability to translate complex data into actionable business strategies."</p>
+                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Person 3" class="person-img">
+                    <div class="designation">Michael Lee<br>Business Consultant</div>
+                </div>
+            </div>
+
+            <!-- Recommendation 4 -->
+            <div class="recommendation-box">
+                <div class="content">
+                    <p>"His professionalism and dedication ensure that every task is completed with excellence."</p>
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Person 4" class="person-img">
+                    <div class="designation">Sophia Patel<br>Project Manager</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Indicators -->
+        <div class="indicators" id="indicatorsContainer"></div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carouselContainer = document.getElementById('carouselContainer');
+            const indicatorsContainer = document.getElementById('indicatorsContainer');
+            const slides = document.querySelectorAll('.recommendation-box');
+            let currentSlide = 0;
+            let slideInterval;
+
+            // Create indicators
+            slides.forEach((_, index) => {
+                const indicator = document.createElement('div');
+                indicator.classList.add('indicator');
+                if (index === 0) indicator.classList.add('active');
+                indicator.addEventListener('click', () => {
+                    goToSlide(index);
+                    resetInterval();
+                });
+                indicatorsContainer.appendChild(indicator);
+            });
+
+            // Function to move to a specific slide
+            function goToSlide(index) {
+                currentSlide = index;
+                carouselContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // Update indicators
+                document.querySelectorAll('.indicator').forEach((indicator, i) => {
+                    indicator.classList.toggle('active', i === currentSlide);
+                });
+            }
+
+            // Function to move to next slide
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                goToSlide(currentSlide);
+            }
+
+            // Function to start auto sliding
+            function startInterval() {
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+
+            // Function to reset interval (when user interacts)
+            function resetInterval() {
+                clearInterval(slideInterval);
+                startInterval();
+            }
+
+            // Start the auto sliding
+            startInterval();
+
+            // Pause on hover (optional)
+            carouselContainer.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+
+            carouselContainer.addEventListener('mouseleave', () => {
+                startInterval();
+            });
+        });
+    </script>
 </body>
-<style>
-.recommendations {
-  background-color: #5389cb; /* Deep dark blue background */
-  color: #ffffff; /* White text */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove any margin */
-  height: 450px; /* Height for visible area */
-  min-height: 450px; /* Prevents content from stretching */
-  max-height: 450px; /* Limits the max height */
-  display: flex;
-  align-items: center; /* Vertically center content */
-  justify-content: center; /* Horizontally center content */
-  overflow: hidden; /* Hide overflow for the sliding effect */
-  position: relative; /* Positioning context for the arrow button */
-}
-
-.recommendations .box-container {
-  display: flex;
-  transition: transform 0.5s ease; /* Smooth transition for sliding */
-  width: 100%; /* The container takes 100% of the width */
-  height: 100%;
-}
-
-.recommendations .recommendation-box {
-  flex: 0 0 100%; /* Each box takes up 100% of the container width */
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff; /* White background for each box */
-  color: #000000; /* Text color */
-  border: 1px solid #ddd; /* Border for the recommendation box */
-  box-sizing: border-box;
-}
-
-.arrow-right,
-.arrow-left {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  color: #dc1212;
-  font-size: 30px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.arrow-right {
-  right: 20px; /* Position the arrow on the right side */
-}
-
-.arrow-left {
-  left: 20px; /* Position the arrow on the left side */
-}
-
-.arrow-right:hover,
-.arrow-left:hover {
-  color: #de1010; /* Change color on hover */
-}
-</style>
-
-
-
-
-
-
-
-
-<!-- Recommendation section ends -->
-
 
   
   <!-- footer section starts -->
