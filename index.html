@@ -194,6 +194,32 @@
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+/* --- MOBILE RESPONSIVE FIX --- */
+@media screen and (max-width: 768px) {
+    .stats-container {
+        position: relative; /* Stops it from floating over other elements */
+        bottom: 0;
+        right: 0;
+        justify-content: center;
+        flex-wrap: wrap; /* Allows items to wrap if they run out of space */
+        gap: 20px; /* Reduces the space between the stats */
+        margin-top: 30px; 
+        width: 100%;
+    }
+
+    .stat-box {
+        flex: 1 1 30%; /* Helps them sit side-by-side or wrap neatly */
+    }
+
+    .stat-box h3 {
+        font-size: 3rem; /* Halves the giant number size for phones */
+    }
+
+    .stat-box p {
+        font-size: 1rem; /* Shrinks the text to fit the screen */
+    }
+}
 </style>
 
 <!-- hero section ends -->
