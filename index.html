@@ -143,9 +143,96 @@
       </ul>
     </div>
   </div>
-<div class="image">
-  <img draggable="false" class="tilt" src="assets/images/Commissioned Illustration_2020 Summer - Jiaqi Wang.gif" alt="">
-</div>
+<div class="roadmap-container">
+  <svg viewBox="0 -150 2150 750" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+      <defs>
+          <linearGradient id="roadFade" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#222" stop-opacity="0" />
+              <stop offset="5%" stop-color="#222" stop-opacity="1" />
+              <stop offset="95%" stop-color="#222" stop-opacity="1" />
+              <stop offset="100%" stop-color="#222" stop-opacity="0" />
+          </linearGradient>
+      </defs>
+
+      <path d="M 50 200 Q 250 50, 450 200 T 850 200 T 1250 200 T 1650 200 T 2050 200" fill="none" stroke="url(#roadFade)" stroke-width="60" stroke-linecap="round"/>
+      
+      <path d="M 50 200 Q 250 50, 450 200 T 850 200 T 1250 200 T 1650 200 T 2050 200" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="8, 8" opacity="0.8"/>
+
+      <g class="milestone">
+          <line x1="250" y1="125" x2="250" y2="40" stroke="#1bbe9d" stroke-width="4" />
+          <circle cx="250" cy="125" r="9" fill="#222" stroke="#1bbe9d" stroke-width="3"/>
+          <text x="250" y="-35" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="50" fill="#111111">2018-2022</text>
+          <text x="250" y="25" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="50" fill="#3e2723">Tutor, India</text>
+      </g>
+
+      <g class="milestone">
+          <line x1="650" y1="275" x2="650" y2="370" stroke="#1bbe9d" stroke-width="4" />
+          <circle cx="650" cy="275" r="9" fill="#222" stroke="#1bbe9d" stroke-width="3"/>
+          <text x="650" y="440" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="50" fill="#111111">2020-2024</text>
+          <text x="650" y="500" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="50" fill="#3e2723">Linkedin, Freelance</text>
+      </g>
+
+      <g class="milestone">
+          <line x1="1050" y1="125" x2="1050" y2="40" stroke="#1bbe9d" stroke-width="4" />
+          <circle cx="1050" cy="125" r="9" fill="#222" stroke="#1bbe9d" stroke-width="3"/>
+          <text x="1050" y="-35" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="50" fill="#111111">2021-2024</text>
+          <text x="1050" y="25" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="50" fill="#3e2723">CCTech, India</text>
+      </g>
+      
+      <g class="milestone">
+          <line x1="1450" y1="275" x2="1450" y2="370" stroke="#1bbe9d" stroke-width="4" />
+          <circle cx="1450" cy="275" r="9" fill="#222" stroke="#1bbe9d" stroke-width="3"/>
+          <text x="1450" y="440" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="50" fill="#111111">2025-2026</text>
+          <text x="1450" y="500" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="50" fill="#3e2723">Tenet HealthCare, USA</text>
+      
+      </g>
+
+      <g class="milestone">
+          <line x1="1850" y1="125" x2="1850" y2="40" stroke="#1bbe9d" stroke-width="4" />
+          <circle cx="1850" cy="125" r="9" fill="#222" stroke="#1bbe9d" stroke-width="3"/>
+          <text x="1850" y="-35" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="50" fill="#333">2026 - present</text>
+          <text x="1850" y="25" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="50" fill="#555">Nidaan Systems, USA</text>
+      </g>
+    </svg>
+  </div>
+
+  <style>
+    /* --- ROADMAP SPECIFIC CSS --- */
+.roadmap-container {
+    flex: 1 1 900px;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10; /* Keeps it under the stats block */
+    padding: 20px;
+}
+
+.milestone {
+    cursor: pointer;
+}
+
+.milestone text {
+    transition: all 0.3s ease;
+}
+
+/* Hover effects for interactivity */
+.milestone:hover circle {
+    fill: #1bbe9d;
+}
+
+.milestone:hover text {
+    fill: #1bbe9d;
+}
+
+/* Ensure mobile constraints */
+@media screen and (max-width: 768px) {
+    .roadmap-container {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+}
+  </style>
 <!-- Impact Stats Section -->
 <div class="stats-container">
     <div class="stat-box">
